@@ -1,0 +1,418 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/public/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+:root {
+    --Font-Roboto: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Font-Roboto) !important;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+.rk-header {
+    width: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    font-family: var(--Font-Roboto);
+}
+
+.rk-box {
+    width: 95%;
+    max-width: 1500px;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rk-logo {
+    width: 120px;
+}
+
+/* ================= DESKTOP NAVIGATION ================= */
+.rk-nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.rk-right-desktop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rk-nav-desktop a {
+    color: #eaeaea;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.rk-nav-desktop a:hover {
+    color: #fff;
+}
+
+.pill-btn a {
+    padding: 4px 18px;
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.pill-btn a:hover {
+    background: #f2f2f2;
+}
+
+.rk-search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 4px;
+}
+
+.rk-search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    width: 150px;
+}
+
+.rk-search-icon {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.rk-login-btn {
+    padding: 8px 24px;
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rk-login-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= MOBILE TOGGLE ================= */
+
+.rk-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.rk-toggle i {
+    color: #fff !important;
+    font-size: 28px;
+}
+
+
+/* ================= MOBILE SLIDE MENU ================= */
+.rk-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #000;
+    z-index: 999;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    padding-top: 60px;
+}
+
+.rk-mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu-content {
+    padding: 80px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.rk-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rk-nav-mobile a {
+    color: #eaeaea;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.rk-nav-mobile a:hover {
+    color: #fff;
+    padding-left: 10px;
+}
+
+.mobile-search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #555;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.mobile-search-box .rk-search-input {
+    width: 100%;
+    font-size: 14px;
+}
+
+.mobile-login-btn {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================= HERO SECTION ================= */
+.header-section {
+    min-height: 100vh;
+    background: url("./assets/hero-bg.png") center/cover no-repeat;
+    color: #fff;
+    padding-top: 70px;
+}
+
+.hero-title {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #d1d1d1;
+    max-width: 720px;
+    margin: 15px auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.hero-btn {
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.hero-btn.primary {
+    border: 1px solid #f5c542;
+    color: #f5c542;
+}
+
+.hero-btn.primary:hover {
+    background: #f5c542;
+    color: #000;
+}
+
+.hero-btn.secondary {
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.hero-btn.secondary:hover {
+    border-color: #fff;
+}
+
+.hero-stats {
+    margin-top: 60px;
+}
+
+.stats-text {
+    font-size: 14px;
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 22px;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.stat-box h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.stat-box p {
+    font-size: 13px;
+    color: #cfcfcf;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* TABLET (768px - 991px) */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .rk-nav-desktop {
+        gap: 16px;
+    }
+
+    .rk-nav-desktop a {
+        font-size: 12px;
+    }
+
+    .rk-search-box {
+        display: none;
+    }
+}
+
+
+/* MOBILE (0px - 767px) */
+
+@media (max-width: 767px) {
+
+    /* Hide desktop elements */
+    .rk-nav-desktop,
+    .rk-right-desktop {
+        display: none !important;
+    }
+
+    /* Show toggle button */
+    .rk-toggle {
+        display: block !important;
+        color: #fff;
+         display: flex !important;
+    }
+
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-stats .col-md-3 {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* SMALL MOBILE (0px - 576px) */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-btn {
+        width: 200px;
+        text-align: center;
+    }
+
+    .hero-stats {
+        margin-top: 40px;
+    }
+
+    .stats-text {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .stat-box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .stat-box h3 {
+        font-size: 28px;
+    }
+
+    /* Adjust mobile menu width for small screens */
+    .rk-mobile-menu {
+        width: 85%;
+        max-width: 300px;
+    }
+
+    .mobile-menu-content {
+        padding: 70px 20px 20px;
+    }
+
+    .rk-box {
+        padding: 12px 0;
+    }
+
+    .rk-logo {
+        width: 100px;
+    }
+}

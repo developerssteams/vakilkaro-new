@@ -9,18 +9,21 @@ import PopularSearches from "../components/PopularSearches";
 import TawkTo from "../components/TawkTo";
 import StorySection from "../components/StorySection";
 // import ServiceSlider from "../components/ServiceSlider";
+import VerifiedServices from "../components/VerifiedServices";
+import LegalRepresentation from "../components/LegalRepresentation";
 function Home() {
     return (
         <>
 
-           
-            <StorySection />
+             <VerifiedServices />
+             <LegalRepresentation />
+            {/* <StorySection /> */}
             {/* <ServiceSlider /> */}
-            <WhyVakilkaro />
-            <Timeline />
+            {/* <WhyVakilkaro /> */}
+            {/* <Timeline /> */}
             {/* <ClientsSection /> */}
             {/* <Testimonials /> */}
-            <PopularSearches />
+            {/* <PopularSearches /> */} 
             {/* <BlogSection /> */}
             <TawkTo />
 
