@@ -11,12 +11,16 @@ import StorySection from "../components/StorySection";
 // import ServiceSlider from "../components/ServiceSlider";
 import VerifiedServices from "../components/VerifiedServices";
 import LegalRepresentation from "../components/LegalRepresentation";
+import Partner from "../components/Partner";
+import Journey from "../components/Journey";
 function Home() {
     return (
         <>
 
              <VerifiedServices />
              <LegalRepresentation />
+             <Partner />
+             <Journey />
             {/* <StorySection /> */}
             {/* <ServiceSlider /> */}
             {/* <WhyVakilkaro /> */}

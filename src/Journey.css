@@ -1,0 +1,135 @@
+/* ===================== JOURNEY TIMELINE ===================== */
+.journey-wrap {
+  background: #1f1f1f;
+  min-height: 100vh;
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* MAIN CARD */
+.journey-card {
+  width: 520px;
+  height: 260px;
+  border-radius: 20px;
+  padding: 26px 30px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* FOLDER TAB */
+.journey-card::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 180px;
+  height: 44px;
+  border-radius: 16px 16px 0 0;
+  background: inherit;
+}
+
+/* WAVE LINE */
+.journey-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300'%3E%3Cpath d='M0 140 C120 40 260 240 400 140 480 80 560 200 600 160' stroke='rgba(255,255,255,0.18)' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* YEAR */
+.year {
+  position: absolute;
+  top: 10px;
+  right: 26px;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* VERTICAL LINE */
+.v-line {
+  width: 3px;
+  height: 60px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* IMAGE */
+.journey-img {
+  width: 230px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* ALIGNMENT */
+.left {
+  align-self: flex-start;
+}
+
+.right {
+  align-self: flex-end;
+}
+
+.right .content {
+  flex-direction: row-reverse;
+}
+
+/* COLORS */
+.blue { background: #2d32e8; }
+.red { background: #e11d2e; }
+.purple { background: #6f2cf4; }
+.green { background: #18b978; }
+.orange { background: #f08c28; }
+.cyan { background: #1abed6; }
+.pink { background: #e84393; }
+.yellow { background: #f1c40f; color: #000; }
+.teal { background: #009688; }
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 768px) {
+  .journey-wrap {
+    padding: 60px 20px;
+    gap: 80px;
+  }
+
+  .journey-card {
+    width: 100%;
+    height: 240px;
+    align-self: center !important;
+  }
+
+  .year {
+    font-size: 42px;
+  }
+
+  .journey-img {
+    width: 180px;
+    height: 120px;
+  }
+
+  .content {
+    bottom: 24px;
+    left: 20px;
+  }
+
+  .right .content {
+    right: 20px;
+  }
+}

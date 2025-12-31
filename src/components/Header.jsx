@@ -11,16 +11,16 @@ import "../Header.css";
 function Header() {
     const [serviceType, setServiceType] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
-    
+
     // Init AOS
     useEffect(() => {
         AOS.init({ duration: 1200, once: false });
     }, []);
-    
+
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-    
+
     // Close menu when clicking outside
     const closeMenu = () => {
         setMenuOpen(false);
@@ -75,7 +75,7 @@ function Header() {
                             />
                             <i className="ri-search-line rk-search-icon"></i>
                         </div>
-                        
+
                         <nav className="rk-nav-mobile">
                             <div className="rk-menu-item"><a href="#" onClick={closeMenu}>About</a></div>
                             <div className="rk-menu-item"><a href="#" onClick={closeMenu}>Verified Services</a></div>
@@ -84,11 +84,11 @@ function Header() {
                             <div className="rk-menu-item"><a href="#" onClick={closeMenu}>Become Partner</a></div>
                             <div className="rk-menu-item"><a href="#" onClick={closeMenu}>Contact Us</a></div>
                         </nav>
-                        
+
                         <button className="rk-login-btn mobile-login-btn" onClick={closeMenu}>Log In</button>
                     </div>
                 </div>
-                
+
                 {/* Overlay for closing menu */}
                 {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
             </header>
