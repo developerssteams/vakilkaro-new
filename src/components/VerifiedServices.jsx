@@ -23,21 +23,24 @@ const VerifiedServices = () => {
       if (!card) return;
 
       const cardWidth = card.offsetWidth + 20;
+      const visibleCards = 4;
+      const maxIndex = Math.ceil(services.length / visibleCards) - 1;
 
       indexRef.current++;
 
-      if (indexRef.current >= services.length) {
+      if (indexRef.current > maxIndex) {
         indexRef.current = 0;
       }
 
       sliderRef.current.scrollTo({
-        left: cardWidth * indexRef.current,
+        left: indexRef.current * cardWidth * visibleCards,
         behavior: "smooth",
       });
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
+
 
   return (
     <section className="verified-section">

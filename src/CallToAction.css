@@ -1,0 +1,120 @@
+.cta-section {
+  background: #1c1c1c;
+  padding: 80px 40px;
+}
+
+/* MAIN CARD */
+.cta-inner {
+  position: relative;
+  background: linear-gradient(135deg, #f4f5f8, #ffffff);
+  border-radius: 28px;
+  padding: 70px 60px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+/* LEFT CONTENT */
+.cta-content {
+  max-width: 520px;
+  z-index: 2;
+}
+
+.cta-content h2 {
+  font-size: 42px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.2;
+}
+
+.cta-content h2 span {
+  font-weight: 700;
+}
+
+.cta-content p {
+  margin-top: 16px;
+  font-size: 15px;
+  color: #555;
+  max-width: 420px;
+}
+
+/* BUTTONS */
+.cta-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn.primary {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+/* RIGHT IMAGE */
+.cta-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 46%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.cta-image img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cta-inner {
+    flex-direction: column;
+    padding: 50px 30px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .cta-content {
+    max-width: 100%;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  .cta-image {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .cta-image img {
+    height: auto;
+    width: 280px;
+  }
+}

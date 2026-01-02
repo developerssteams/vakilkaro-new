@@ -13,6 +13,8 @@ import VerifiedServices from "../components/VerifiedServices";
 import LegalRepresentation from "../components/LegalRepresentation";
 import Partner from "../components/Partner";
 import Journey from "../components/Journey";
+import Story from "../components/Story";
+import CallToAction from "../components/CallToAction";
 function Home() {
     return (
         <>
@@ -21,9 +23,11 @@ function Home() {
              <LegalRepresentation />
              <Partner />
              <Journey />
+             <Story />
             {/* <StorySection /> */}
             {/* <ServiceSlider /> */}
-            {/* <WhyVakilkaro /> */}
+            <WhyVakilkaro />
+            <CallToAction />
             {/* <Timeline /> */}
             {/* <ClientsSection /> */}
             {/* <Testimonials /> */}
