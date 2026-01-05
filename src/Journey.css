@@ -1,6 +1,6 @@
 /* ===================== JOURNEY TIMELINE ===================== */
 .journey-wrap {
-  background: #1f1f1f;
+  background: #212121;
   min-height: 100vh;
   padding: 100px 80px;
   display: flex;
@@ -75,7 +75,7 @@
   height: 140px;
   object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 /* ALIGNMENT */
@@ -92,15 +92,42 @@
 }
 
 /* COLORS */
-.blue { background: #2d32e8; }
-.red { background: #e11d2e; }
-.purple { background: #6f2cf4; }
-.green { background: #18b978; }
-.orange { background: #f08c28; }
-.cyan { background: #1abed6; }
-.pink { background: #e84393; }
-.yellow { background: #f1c40f; color: #000; }
-.teal { background: #009688; }
+.blue {
+  background: #2d32e8;
+}
+
+.red {
+  background: #e11d2e;
+}
+
+.purple {
+  background: #6f2cf4;
+}
+
+.green {
+  background: #18b978;
+}
+
+.orange {
+  background: #f08c28;
+}
+
+.cyan {
+  background: #1abed6;
+}
+
+.pink {
+  background: #e84393;
+}
+
+.yellow {
+  background: #f1c40f;
+  color: #000;
+}
+
+.teal {
+  background: #009688;
+}
 
 /* ===================== MOBILE ===================== */
 @media (max-width: 768px) {

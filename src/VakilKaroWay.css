@@ -1,0 +1,14 @@
+.vk-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background:#212121; /* image ke background jaisa */
+  padding: 60px 0;
+}
+
+.vk-image {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  display: block;
+}

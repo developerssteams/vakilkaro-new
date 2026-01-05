@@ -1,72 +1,94 @@
 import React from "react";
-import "../App.css";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import "../Footer.css";
 
-function Footer() {
-    return (
-        <footer className="footer">
+const Footer = () => {
+  return (
+    <div className="fo">
+      <footer className="footer">
+        <div className="footer-container">
 
-            {/* White Line Top Border */}
-            <div className="footer-divider"></div>
-
-            {/* Footer Main Section */}
-            <div className="footer-container">
-
-                {/* Column 1 */}
-                <div className="footer-column">
-                    <h3>Vakilkaro</h3>
-                    <ul>
-                        <li><a href="#">About Vakilkaro</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 2 */}
-                <div className="footer-column">
-                    <h3>Platforms</h3>
-                    <ul>
-                        <li><a href="#">Business Search</a></li>
-                        <li><a href="#">Trademark Search</a></li>
-                        <li><a href="#">Vakilkaro for UAE</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 3 */}
-                <div className="footer-column">
-                    <h3>Usage</h3>
-                    <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 4 */}
-                <div className="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Confidentiality Policy</a></li>
-                        <li><a href="#">Disclaimer Policy</a></li>
-                        <li><a href="#">Vakilkaro Review</a></li>
-                    </ul>
-                </div>
-
+          {/* LEFT */}
+          <div className="footer-brand">
+            <div className="logo">
+              Vakil<span>Karo</span>
+              <small>ISO Certified 9001:2008</small>
             </div>
 
-            {/* Footer Bottom */}
-            <div className="footer-bottom">
-                <p>© 2025 Vakilkaro Private Limited. All rights reserved.</p>
+            <p>
+              Trusted by industry leaders, VakilKaro delivers excellence.
+              Recognized by Muthoot Finance, Kotak Mahindra Bank, and Dainik
+              Bhaskar for outstanding services.
+            </p>
 
-                <div className="social-icons">
-                    <a href="#"><FaFacebookF /></a>
-                    <a href="#"><FaInstagram /></a>
-                    <a href="#"><FaLinkedinIn /></a>
-                </div>
+            <div className="socials">
+              <span>f</span>
+              <span>◯</span>
+              <span>🐦</span>
+              <span>in</span>
             </div>
+          </div>
 
-        </footer>
-    );
-}
+          {/* COMPANY */}
+          <div className="footer-col">
+            <h4>COMPANY</h4>
+            <ul>
+              <li>About Us</li>
+              <li>News</li>
+              <li>Blogs</li>
+              <li>Associate Partner</li>
+              <li>Talk to an Expert</li>
+            </ul>
+          </div>
+
+          {/* REGISTRATION */}
+          <div className="footer-col">
+            <h4>REGISTRATION SERVICES</h4>
+            <ul>
+              <li>Startup Kit</li>
+              <li>NGO Combo</li>
+              <li>OPC Registration</li>
+              <li>LLP Registration</li>
+              <li>FPC Registration</li>
+              <li>MFC Registration</li>
+              <li>NGO King</li>
+              <li>NBFC Registration</li>
+            </ul>
+          </div>
+
+          {/* LEGAL */}
+          <div className="footer-col">
+            <h4>LEGAL SERVICES</h4>
+            <ul>
+              <li>Drafting of an Agreements</li>
+              <li>Legal Notice</li>
+              <li>Rent Agreement</li>
+              <li>Divorce Petition</li>
+              <li>Marriage Registration</li>
+              <li>Consumer Complaints</li>
+              <li>Motor Accidental Claims</li>
+              <li>Lawyer’s Appointment</li>
+            </ul>
+          </div>
+
+          {/* LINKS */}
+          <div className="footer-col">
+            <h4>USEFUL LINKS</h4>
+            <ul>
+              <li>Privacy Policy</li>
+              <li>Terms & Condition</li>
+              <li>Refund Policy</li>
+              <li>Pricing Policy</li>
+              <li>Cancelation Policy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          © 2026 Copyright by IK Developers. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  );
+};
 
 export default Footer;

@@ -1,70 +1,64 @@
 import { useEffect, useRef } from "react";
-import "../VerifiedServices.css";
 import { FiArrowUpRight } from "react-icons/fi";
+import "../VerifiedServices.css";
 
 const services = [
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text", color: "red" },
-  { title: "GST Registration", desc: "Lorem ipsum is simply dummy text", color: "purple" },
-  { title: "Trademark Registration", desc: "Lorem ipsum is simply dummy text", color: "blue" },
-  { title: "FSSAI Registration", desc: "Lorem ipsum is simply dummy text", color: "darkblue" },
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text", color: "lightblue" },
-  { title: "Trade License", desc: "Lorem ipsum is simply dummy text", color: "green" },
+  { title: "Company Registration", color: "red" },
+  { title: "GST Registration", color: "purple" },
+  { title: "Trademark Registration", color: "blue" },
+  { title: "FSSAI Registration", color: "navy" },
+  { title: "Company Registration", color: "lightblue" },
+  { title: "Trade License", color: "green" },
 ];
 
 const VerifiedServices = () => {
   const sliderRef = useRef(null);
-  const indexRef = useRef(0);
+  let index = 0;
 
   useEffect(() => {
+    const slider = sliderRef.current;
+
     const interval = setInterval(() => {
-      if (!sliderRef.current) return;
+      const cardWidth = slider.children[0].offsetWidth + 24;
 
-      const card = sliderRef.current.children[0];
-      if (!card) return;
+      index++;
+      if (index > services.length - 5) index = 0;
 
-      const cardWidth = card.offsetWidth + 20;
-      const visibleCards = 4;
-      const maxIndex = Math.ceil(services.length / visibleCards) - 1;
-
-      indexRef.current++;
-
-      if (indexRef.current > maxIndex) {
-        indexRef.current = 0;
-      }
-
-      sliderRef.current.scrollTo({
-        left: indexRef.current * cardWidth * visibleCards,
+      slider.scrollTo({
+        left: cardWidth * index,
         behavior: "smooth",
       });
-    }, 3000);
+    }, 2800);
 
     return () => clearInterval(interval);
   }, []);
 
-
   return (
-    <section className="verified-section">
-      <div className="container">
-        <div className="verified-header text-center text-md-start">
-          <h2>Our Verified Services</h2>
-          <p>
-            All-in-one platform for online legal consultation, business
-            incorporation, corporate compliance, and startup-friendly
-            solutions—tailored for every industry.
-          </p>
-        </div>
+    <section className="vs-section">
+      <div className="vs-header">
+        <h2>
+          Our <span>Verified Services</span>
+        </h2>
+        <p>
+          All-in-one platform for online legal consultation, business
+          incorporation, corporate compliance, and startup-friendly
+          solutions—tailored for every industry.
+        </p>
+      </div>
 
-        <div className="services-row mt-4" ref={sliderRef}>
-          {services.map((item, i) => (
-            <div key={i} className={`service-card ${item.color}`}>
+      <div className="vs-slider" ref={sliderRef}>
+        {services.map((item, i) => (
+          <div className={`vs-card ${item.color}`} key={i}>
+            <div>
               <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-              <span className="icon">
-                <FiArrowUpRight />
-              </span>
+              <p>Lorem Ipsum is simply dummy text</p>
             </div>
-          ))}
-        </div>
+
+            <span className="vs-arrow">
+              <FiArrowUpRight />
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );

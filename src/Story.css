@@ -1,73 +1,45 @@
-/* ================= MAIN SECTION ================= */
 .story-section {
-  background: #111;
-  padding: 80px 0 120px;
+  background: #212121;
+  padding: 120px 0;
+  overflow: hidden;
 }
 
-/* ================= TOP FULL WIDTH IMAGE ================= */
-.story-hero {
-  width: 100%;
-  padding: 0 40px 80px;
-}
-
-.story-hero img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 28px;
-}
-
-/* ================= CONTENT CONTAINER ================= */
-.story-container {
+/* ONE ROW ALWAYS */
+.story-row {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  gap: 80px;
   align-items: center;
+  gap: 80px;
   padding: 0 20px;
 }
 
-/* ================= LEFT IMAGE ================= */
+/* IMAGE – starts FULL WIDTH */
 .story-image {
-  flex: 1;
-  height: 420px;
-  width: 620px;
-  border-radius: 20px;
-  background: #2a2a2a;
-  position: relative;
+  width: 100vw;          /* 🔥 covers content initially */
+  height: 520px;
+  flex-shrink: 0;
   overflow: hidden;
+  border-radius: 28px;
+  z-index: 2;
 }
 
 .story-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
 }
 
-/* optional glow */
-.story-image::after {
-  content: "";
-  position: absolute;
-  bottom: -60px;
-  left: -60px;
-  width: 200px;
-  height: 200px;
-  background: rgba(0, 255, 150, 0.25);
-  filter: blur(80px);
-}
-
-/* ================= CONTENT ================= */
+/* CONTENT – already on right */
 .story-content {
   flex: 1;
   color: #fff;
+  z-index: 1;
 }
 
 .story-content h2 {
   font-size: 42px;
-  line-height: 1.2;
   margin-bottom: 24px;
-  font-weight: 600;
 }
 
 .story-content h2 span {
@@ -76,20 +48,16 @@
 
 .story-content p {
   color: #bfbfbf;
-  font-size: 16px;
   line-height: 1.8;
   margin-bottom: 18px;
 }
 
-/* ================= BUTTON ================= */
 .story-btn {
-  margin-top: 20px;
-  background: transparent;
+  margin-top: 24px;
+  background: none;
   border: none;
   color: #fff;
-  font-size: 16px;
   display: inline-flex;
-  align-items: center;
   gap: 10px;
   cursor: pointer;
 }
@@ -98,37 +66,17 @@
   border: 1px solid #fff;
   border-radius: 50%;
   padding: 6px;
-  font-size: 28px;
-  transition: 0.3s;
+  font-size: 26px;
 }
 
-.story-btn:hover svg {
-  background: #fff;
-  color: #000;
-}
-
-/* ================= RESPONSIVE ================= */
+/* MOBILE */
 @media (max-width: 900px) {
-  .story-hero {
-    padding: 0 20px 50px;
-  }
-
-  .story-hero img {
-    height: 300px;
-    border-radius: 20px;
-  }
-
-  .story-container {
+  .story-row {
     flex-direction: column;
-    gap: 40px;
   }
 
   .story-image {
     width: 100%;
-    height: 300px;
-  }
-
-  .story-content h2 {
-    font-size: 32px;
+    height: 320px;
   }
 }

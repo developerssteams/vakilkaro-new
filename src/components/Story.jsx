@@ -1,22 +1,41 @@
+import { useEffect, useRef } from "react";
 import "../Story.css";
-import teamImg from "../assets/team.jpeg"; // ✅ image import
+import teamImg from "../assets/team.jpeg";
 import { FiArrowUpRight } from "react-icons/fi";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Story = () => {
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(imgRef.current, {
+      scrollTrigger: {
+        trigger: ".story-section",
+        start: "top top",
+        end: "+=500",
+        scrub: true,
+        pin: true,
+      },
+      width: "620px",
+      height: "420px",
+      borderRadius: "20px",
+      ease: "none",
+    });
+  }, []);
+
   return (
     <section className="story-section">
-          <div className="story-hero">
-    <img src={teamImg} alt="Vakilkaro Team" />
-  </div>
-      <div className="story-container">
+      <div className="story-row">
 
-        {/* LEFT IMAGE PLACEHOLDER */}
-        <div >
-           <img  className="story-image" src={teamImg} alt="Vakilkaro Team"/>
-
+        {/* IMAGE */}
+        <div className="story-image" ref={imgRef}>
+          <img src={teamImg} alt="Vakilkaro Team" />
         </div>
 
-        {/* RIGHT CONTENT */}
+        {/* CONTENT (RIGHT SIDE ALWAYS) */}
         <div className="story-content">
           <h2>
             The Vakilkaro Story: <br />

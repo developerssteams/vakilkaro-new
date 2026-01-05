@@ -15,23 +15,32 @@ import Partner from "../components/Partner";
 import Journey from "../components/Journey";
 import Story from "../components/Story";
 import CallToAction from "../components/CallToAction";
+import ExpertSlider from "../components/LeadershipSlider";
+import Advocates from "../components/Advocates";
+import VakilKaroWay from "../components/VakilkaroWay";
+import Testimonials from "../components/Testimonials";
+import ContactSection from "../components/ContactSection";
 function Home() {
     return (
         <>
 
-             <VerifiedServices />
-             <LegalRepresentation />
-             <Partner />
-             <Journey />
-             <Story />
+            <VerifiedServices />
+            <LegalRepresentation />
+            <Partner />
+            <Journey />
+            <Story />
             {/* <StorySection /> */}
             {/* <ServiceSlider /> */}
             <WhyVakilkaro />
             <CallToAction />
+            <ExpertSlider />
+            <Advocates />
+            <VakilKaroWay />
+            <Testimonials />
+            <ContactSection />
             {/* <Timeline /> */}
             {/* <ClientsSection /> */}
-            {/* <Testimonials /> */}
-            {/* <PopularSearches /> */} 
+            {/* <PopularSearches /> */}
             {/* <BlogSection /> */}
             <TawkTo />
 

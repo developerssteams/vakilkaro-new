@@ -3,11 +3,12 @@ import { FiArrowUpRight } from "react-icons/fi";
 import "../LegalRepresentation.css";
 
 const services = [
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text" },
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text" },
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text" },
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text" },
-  { title: "Company Registration", desc: "Lorem ipsum is simply dummy text" },
+  "Company Registration",
+  "Company Registration",
+  "Company Registration",
+  "Company Registration",
+  "Company Registration",
+  "Company Registration",
 ];
 
 const LegalRepresentation = () => {
@@ -15,14 +16,13 @@ const LegalRepresentation = () => {
 
   useEffect(() => {
     const slider = sliderRef.current;
-    if (!slider) return;
-
     let index = 0;
+
     const interval = setInterval(() => {
       const cardWidth = slider.children[0].offsetWidth + 24;
-      index++;
 
-      if (index >= services.length) index = 0;
+      index++;
+      if (index > services.length - 5) index = 0;
 
       slider.scrollTo({
         left: cardWidth * index,
@@ -45,11 +45,11 @@ const LegalRepresentation = () => {
       </div>
 
       <div className="legal-slider" ref={sliderRef}>
-        {services.map((item, i) => (
-          <div className="legal-card" key={i}>
+        {services.map((title, i) => (
+          <div className="legal-card white" key={i}>
             <div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>  
+              <h3>{title}</h3>
+              <p>Lorem Ipsum is simply dummy text</p>
             </div>
 
             <span className="arrow-icon">

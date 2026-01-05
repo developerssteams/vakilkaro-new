@@ -1,5 +1,5 @@
 .partner-section {
-  background: radial-gradient(circle at top, #222, #0f0f0f);
+  background: #212121;
   padding: 90px 30px;
   text-align: center;
   color: #fff;
@@ -54,7 +54,7 @@
   height: 200px;
   border-radius: 18px;
   object-fit: cover;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
 }
 
 /* SINGLE IMAGE */

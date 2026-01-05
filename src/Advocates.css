@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #212121;
+}
+
+/* SECTION - EXACT */
+.expert-section {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* SLIDER - EXACT */
+.slider {
+    display: flex;
+    gap: 80px;
+    width: max-content;
+   animation: slide 10s linear infinite; /* 30 seconds = slower */
+}
+
+/* SINGLE SLIDE - EXACT */
+.slide {
+    position: relative;
+    width: 600px;
+    height: 340px;
+}
+
+/* BACK IMAGE CARD - EXACT */
+.bg-card {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 400px;
+    height: 260px;
+    background: url("../assets/bg-card.png") center/cover no-repeat;
+    border-radius: 18px;
+    z-index: 1;
+}
+
+/* PERSON IMAGE - EXACT POSITION */
+.person-img {
+    position: absolute;
+    top: -20px;
+    right: 340px;
+    z-index: 4;
+}
+
+.person-img img {
+    height: 320px;
+    width: auto;
+    display: block;
+}
+
+/* INFO CARD - EXACT */
+.info-card {
+    position: absolute;
+    right: 20px;
+    top: 90px;
+    width: 390px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px 73px;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* RATING - EXACT */
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #f5a623;
+    margin-bottom: 14px;
+}
+
+.rating span {
+    color: #777;
+    font-size: 13px;
+}
+
+.arrow {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 18px;
+}
+
+/* TEXT - EXACT */
+.info-card h2 {
+    font-size: xx-large;
+    margin-bottom: 14px;
+    font: bold;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* SLIDE ANIMATION - EXACT */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.slider:hover {
+    animation-play-state: paused;
+}
