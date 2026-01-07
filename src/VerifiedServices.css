@@ -1,19 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 * {
-  font-family: "Inter", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .vs-section {
   background: #212121;
-  padding: 90px 70px;
+  padding: 60px 35px;
   color: #fff;
+}
+
+
+.vs-header {
+  width: 100%;
+  
+
 }
 
 /* HEADER */
 .vs-header h2 {
+  margin: 0;
   font-size: 44px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
 }
 
 .vs-header h2 span {
@@ -26,6 +35,7 @@
   font-size: 15px;
   color: #d0d0d0;
   line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* SLIDER */

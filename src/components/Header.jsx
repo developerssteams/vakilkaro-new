@@ -121,25 +121,25 @@ function Header() {
                                         <div className="col">
                                             <div className="stat-box">
                                                 <h3>850+</h3>
-                                                <p>Projects Delivered</p>
+                                                <p>Projects  <br /> Delivered</p>
                                             </div>
                                         </div>
                                         <div className="col">
                                             <div className="stat-box">
                                                 <h3>88%</h3>
-                                                <p>Client Retention</p>
+                                                <p>Client <br /> Retention</p>
                                             </div>
                                         </div>
                                         <div className="col">
                                             <div className="stat-box">
                                                 <h3>150+</h3>
-                                                <p>Our Experts Team</p>
+                                                <p>Our Experts <br /> Team</p>
                                             </div>
                                         </div>
                                         <div className="col">
                                             <div className="stat-box">
                                                 <h3>15+</h3>
-                                                <p>Years of Experience</p>
+                                                <p>Years of <br /> Experience</p>
                                             </div>
                                         </div>
                                     </div>

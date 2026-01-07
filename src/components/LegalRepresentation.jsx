@@ -4,11 +4,11 @@ import "../LegalRepresentation.css";
 
 const services = [
   "Company Registration",
-  "Company Registration",
-  "Company Registration",
-  "Company Registration",
-  "Company Registration",
-  "Company Registration",
+  "GST Registration",
+  "Trademark Registration",
+  "Legal Notice",
+  "Startup Compliance",
+  "Business Consulting",
 ];
 
 const LegalRepresentation = () => {
@@ -22,7 +22,7 @@ const LegalRepresentation = () => {
       const cardWidth = slider.children[0].offsetWidth + 24;
 
       index++;
-      if (index > services.length - 5) index = 0;
+      if (index > services.length - 4) index = 0;
 
       slider.scrollTo({
         left: cardWidth * index,
@@ -35,8 +35,20 @@ const LegalRepresentation = () => {
 
   return (
     <section className="legal-section">
+      
+      {/* ===== HEADING STRIP ===== */}
+     
+
+      {/* ===== SUB HEADER ===== */}
       <div className="legal-header">
-        <h2>Specialized Legal Representation</h2>
+         <div className="verified-strip">
+        <h1>
+          Specialized <span> Legal Representation </span>
+        </h1>
+      </div>
+        <h2>
+         
+        </h2>
         <p>
           All-in-one platform for online legal consultation, business
           incorporation, corporate compliance, and startup-friendly
@@ -44,9 +56,10 @@ const LegalRepresentation = () => {
         </p>
       </div>
 
+      {/* ===== SLIDER ===== */}
       <div className="legal-slider" ref={sliderRef}>
         {services.map((title, i) => (
-          <div className="legal-card white" key={i}>
+          <div className="legal-card" key={i}>
             <div>
               <h3>{title}</h3>
               <p>Lorem Ipsum is simply dummy text</p>
@@ -58,6 +71,7 @@ const LegalRepresentation = () => {
           </div>
         ))}
       </div>
+
     </section>
   );
 };

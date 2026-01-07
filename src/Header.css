@@ -1,17 +1,14 @@
-@font-face {
-    font-family: "Roboto";
-    src: url("/public/fonts/Roboto-Regular.ttf") format("truetype");
-}
+
 
 :root {
-    --Font-Roboto: "Roboto", sans-serif;
+     --Font-Poppins: 'Poppins', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--Font-Roboto) !important;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
@@ -24,7 +21,7 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: center;
-    font-family: var(--Font-Roboto);
+    font-family: 'Poppins', sans-serif;
 }
 
 .rk-box {
@@ -259,7 +256,8 @@ body {
 
 .hero-btn.primary {
     border: 1px solid #f5c542;
-    color: #f5c542;
+    color: white;
+    background-color: #000;
 }
 
 .hero-btn.primary:hover {
@@ -268,8 +266,9 @@ body {
 }
 
 .hero-btn.secondary {
-    border: 1px solid #555;
+     border: 1px solid #f5c542;
     color: #fff;
+    background-color: black;
 }
 
 .hero-btn.secondary:hover {
@@ -281,7 +280,7 @@ body {
 }
 
 .stats-text {
-    font-size: 14px;
+    font-size: 13px;
     color: #dcdcdc;
     line-height: 1.6;
 }
@@ -290,8 +289,13 @@ body {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 14px;
-    padding: 22px;
+    padding: 10px;
     transition: 0.3s;
+    width: 154px;
+    text-align: left;
+    padding-left: 10px;
+
+
 }
 
 .stat-box:hover {
@@ -302,6 +306,7 @@ body {
 .stat-box h3 {
     font-size: 32px;
     font-weight: 700;
+    
 }
 
 .stat-box p {

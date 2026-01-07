@@ -1,20 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
-  font-family: "Inter", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .legal-section {
   background: #212121;
-  padding: 90px 70px;
+  padding: 60px 35px;
   color: #fff;
 }
 
-/* HEADER */
-.legal-header h2 {
+/* ============================= */
+/* VERIFIED STRIP (IMAGE STYLE) */
+/* ============================= */
+
+.verified-strip {
+  width: fit-content;
+  background: #212121;
+  padding: 0px 0px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.verified-strip h1 {
   font-size: 44px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.verified-strip h1 span {
+  font-weight: 700;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.legal-header h2 {
+  font-size: 40px;
   font-weight: 500;
   margin-bottom: 12px;
+}
+
+.legal-header h2 span {
+  font-weight: 700;
 }
 
 .legal-header p {
@@ -24,15 +57,22 @@
   line-height: 1.6;
 }
 
+/* ============================= */
 /* SLIDER */
+/* ============================= */
+
 .legal-slider {
   margin-top: 60px;
   display: flex;
   gap: 24px;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
+/* ============================= */
 /* CARD */
+/* ============================= */
+
 .legal-card {
   min-width: 260px;
   height: 190px;
@@ -44,11 +84,18 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  transition: 0.3s;
 }
+
+.legal-card:hover {
+  transform: translateY(-6px);
+}
+
+/* TEXT */
 
 .legal-card h3 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -58,7 +105,10 @@
   color: #555;
 }
 
+/* ============================= */
 /* ARROW */
+/* ============================= */
+
 .arrow-icon {
   position: absolute;
   bottom: 16px;
@@ -74,15 +124,22 @@
   transition: 0.3s;
 }
 
-.arrow-icon:hover {
+.legal-card:hover .arrow-icon {
   background: #111;
   color: #fff;
 }
 
+/* ============================= */
 /* RESPONSIVE */
+/* ============================= */
+
 @media (max-width: 1024px) {
   .legal-card {
     min-width: 220px;
+  }
+
+  .verified-strip h1 {
+    font-size: 36px;
   }
 }
 
@@ -93,5 +150,9 @@
 
   .legal-card {
     min-width: 85%;
+  }
+
+  .verified-strip h1 {
+    font-size: 30px;
   }
 }
