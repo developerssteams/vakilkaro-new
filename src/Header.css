@@ -1,7 +1,5 @@
-
-
 :root {
-     --Font-Poppins: 'Poppins', sans-serif;
+    --Font-Poppins: 'Poppins', sans-serif;
 }
 
 body {
@@ -266,7 +264,7 @@ body {
 }
 
 .hero-btn.secondary {
-     border: 1px solid #f5c542;
+    border: 1px solid white;
     color: #fff;
     background-color: black;
 }
@@ -306,7 +304,7 @@ body {
 .stat-box h3 {
     font-size: 32px;
     font-weight: 700;
-    
+
 }
 
 .stat-box p {
@@ -350,7 +348,7 @@ body {
     .rk-toggle {
         display: block !important;
         color: #fff;
-         display: flex !important;
+        display: flex !important;
     }
 
     .hero-title {
