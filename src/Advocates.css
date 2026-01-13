@@ -52,7 +52,7 @@ body {
 }
 
 .person-img img {
-    height: 320px;
+    height: 315px;
     width: auto;
     display: block;
 }
@@ -61,7 +61,7 @@ body {
 .info-card {
     position: absolute;
     right: 20px;
-    top: 90px;
+    top: 75px;
     width: 390px;
     background: #fff;
     border-radius: 18px;

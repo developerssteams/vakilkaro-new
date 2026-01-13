@@ -20,6 +20,7 @@ import Advocates from "../components/Advocates";
 import VakilKaroWay from "../components/VakilkaroWay";
 import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
+import Faq from "../components/Faq";
 function Home() {
     return (
         <>
@@ -38,6 +39,7 @@ function Home() {
             <VakilKaroWay />
             <Testimonials />
             <ContactSection />
+            <Faq />
             {/* <Timeline /> */}
             {/* <ClientsSection /> */}
             {/* <PopularSearches /> */}

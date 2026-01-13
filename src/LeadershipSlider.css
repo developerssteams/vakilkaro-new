@@ -20,7 +20,8 @@ body {
     display: flex;
     gap: 80px;
     width: max-content;
-   animation: slide 10s linear infinite; /* 30 seconds = slower */
+    animation: slide 10s linear infinite;
+    /* 30 seconds = slower */
 }
 
 /* SINGLE SLIDE - EXACT */
@@ -51,7 +52,7 @@ body {
 }
 
 .person-img img {
-    height: 320px;
+    height: 315px;
     width: auto;
     display: block;
 }
@@ -60,7 +61,7 @@ body {
 .info-card {
     position: absolute;
     right: 20px;
-    top: 90px;
+    top: 75px;
     width: 390px;
     background: #fff;
     border-radius: 18px;
@@ -98,10 +99,12 @@ body {
 
 /* TEXT - EXACT */
 .info-card h2 {
-    font-size:10px;
+    font-size: 25px !important;      /* 👈 yahan kam–zyada karo */
+    font-weight: 500;    /* bold ke liye */
     margin-bottom: 14px;
-    font: bold;
+    color: #111;
 }
+
 
 .info-card p {
     font-size: 14px;
