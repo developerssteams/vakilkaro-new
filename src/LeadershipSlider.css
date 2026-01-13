@@ -101,8 +101,10 @@ body {
 
 /* TEXT - EXACT */
 .info-card h2 {
-    font-size: 25px !important;      /* 👈 yahan kam–zyada karo */
-    font-weight: 500;    /* bold ke liye */
+    font-size: 25px !important;
+    /* 👈 yahan kam–zyada karo */
+    font-weight: 500;
+    /* bold ke liye */
     margin-bottom: 14px;
     color: #111;
 }

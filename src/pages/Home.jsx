@@ -17,7 +17,7 @@ import Story from "../components/Story";
 import CallToAction from "../components/CallToAction";
 import ExpertSlider from "../components/LeadershipSlider";
 import Advocates from "../components/Advocates";
-import VakilKaroWay from "../components/VakilkaroWay";
+import VakilKaroWay from "../components/VakilKaroWay";
 import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import Faq from "../components/Faq";
