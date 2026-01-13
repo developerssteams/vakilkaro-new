@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -5,7 +6,7 @@
 
 .vs-section {
   background: #212121;
-  padding: 60px 35px;
+  padding: 25px 35px;
   color: #fff;
 }
 
