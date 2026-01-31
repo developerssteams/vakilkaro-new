@@ -63,43 +63,58 @@ const ExpertSlider = () => {
     }, []);
 
     return (
-        <section className="expert-section">
-            {/* NO slider-container div - EXACT like HTML */}
-            <div className="slider" ref={sliderRef}>
-                {duplicatedExperts.map((expert, index) => (
-                    <div className="slide" key={`${expert.id}-${index}`}>
-                        {/* BACK IMAGE CARD - EXACT like HTML */}
-                        <div
-                            className="bg-card"
-                            style={{
-                                background: `url(${expert.bgImage}) center/cover no-repeat`
-                            }}
-                        ></div>
+        <>
 
-                        {/* PERSON IMAGE - EXACT like HTML */}
-                        <div className="person-img">
-                            <img
-                                src={expert.personImage}
-                                alt={expert.name}
-                            />
-                        </div>
+            <section className="expert-section">
+                   <div className="elite-heading">
+                <h1>
+                    Elite <span>Financial & Corporate Leadership</span>
+                </h1>
 
-                        {/* INFO CARD - EXACT like HTML */}
-                        <div className="info-card">
-                            <div className="rating">
-                                ⭐ {expert.rating} <span>({expert.reviews})</span>
-                                <div className="arrow">›</div>
+                <p>
+                    We believe that every business deserves world-class guidance. That’s why
+                    we’ve curated a powerhouse team of 10 industry-leading CA and CS
+                    professionals.
+                </p>
+            </div>
+
+                {/* NO slider-container div - EXACT like HTML */}
+                <div className="slider" ref={sliderRef}>
+                    {duplicatedExperts.map((expert, index) => (
+                        <div className="slide" key={`${expert.id}-${index}`}>
+                            {/* BACK IMAGE CARD - EXACT like HTML */}
+                            <div
+                                className="bg-card"
+                                style={{
+                                    background: `url(${expert.bgImage}) center/cover no-repeat`
+                                }}
+                            ></div>
+
+                            {/* PERSON IMAGE - EXACT like HTML */}
+                            <div className="person-img">
+                                <img
+                                    src={expert.personImage}
+                                    alt={expert.name}
+                                />
                             </div>
 
-                            <h2>{expert.name}</h2>
+                            {/* INFO CARD - EXACT like HTML */}
+                            <div className="info-card">
+                                <div className="rating">
+                                    ⭐ {expert.rating} <span>({expert.reviews})</span>
+                                    <div className="arrow">›</div>
+                                </div>
 
-                            <p><strong>Experience :</strong> {expert.experience}</p>
-                            <p><strong>Expertise :</strong></p>
+                                <h2>{expert.name}</h2>
+
+                                <p><strong>Experience :</strong> {expert.experience}</p>
+                                <p><strong>Expertise :</strong></p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </section>
+        </>
     );
 };
 

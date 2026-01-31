@@ -1,56 +1,74 @@
 import { useEffect, useRef } from "react";
 import "../Story.css";
-import teamImg from "../assets/team.jpeg";
-import { FiArrowUpRight } from "react-icons/fi";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Story = () => {
-  const imgRef = useRef(null);
+const ScrollDriven = () => {
+  const sectionRef = useRef(null);
+  const imageBoxRef = useRef(null);
+  const textBoxRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(imgRef.current, {
-      scrollTrigger: {
-        trigger: ".story-section",
-        start: "top top",
-        end: "+=500",
-        scrub: true,
-        pin: true,
-      },
-      width: "620px",
-      height: "420px",
-      borderRadius: "20px",
-      ease: "none",
-    });
+    const handleScroll = () => {
+      const section = sectionRef.current;
+      const imageBox = imageBoxRef.current;
+      const textBox = textBoxRef.current;
+
+      if (!section || !imageBox || !textBox) return;
+
+      const rect = section.getBoundingClientRect();
+      const vh = window.innerHeight;
+
+      let progress = -rect.top / vh;
+      progress = Math.max(0, Math.min(1, progress));
+
+      /* PHASE 1 (0 → 0.3) */
+      if (progress <= 0.3) {
+        const p = progress / 0.3;
+
+        textBox.style.opacity = p;
+        textBox.style.transform = `translateY(${120 - p * 120}px)`;
+        textBox.style.width = `${p * 50}vw`;
+        textBox.style.padding = `${p * 80}px`;
+
+        imageBox.style.width = "100vw";
+      }
+
+      /* PHASE 2 (0.3 → 1) */
+      if (progress > 0.3) {
+        const p = (progress - 0.3) / 0.7;
+
+        textBox.style.opacity = 1;
+        textBox.style.transform = "translateY(0)";
+        textBox.style.width = "50vw";
+        textBox.style.padding = "80px";
+
+        imageBox.style.width = `${100 - p * 50}vw`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <section className="story-section">
-      <div className="story-row">
+    <section className="hero-sectionn" ref={sectionRef}>
+      <div className="sticky-wrap">
 
-        {/* IMAGE */}
-        <div className="story-image" ref={imgRef}>
-          <img src={teamImg} alt="Vakilkaro Team" />
+        {/* IMAGE LEFT */}
+        <div className="image-box" ref={imageBoxRef}>
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+            alt="scroll"
+          />
         </div>
 
-        {/* CONTENT (RIGHT SIDE ALWAYS) */}
-        <div className="story-content">
-          <h3>
-            The Vakilkaro Story: <br />
-            <span>Built for You</span>
-          </h3>
-
+        {/* TEXT RIGHT */}
+        <div className="text-box" ref={textBoxRef}>
+          <h2>Scroll Driven Layout</h2>
           <p>
-            We are on a mission to make Entrepreneurship easier and affordable to millions. IndiaFilings provides a simple and intuitive platform for setting up a business and managing compliance. We started our journey in 2014 and bootstrapped the business till 2022, serving over 1 lakh businesses. In 2022, we raised funding from institutional investors to further our mission.
+            Jaise hi image choti hoti hai,
+            ye text niche se aakar
+            right side ki jagah fill karta hai.
           </p>
-
-        
-
-          <button className="story-btn">
-            Know More <FiArrowUpRight />
-          </button>
         </div>
 
       </div>
@@ -58,4 +76,4 @@ const Story = () => {
   );
 };
 
-export default Story;
+export default ScrollDriven;

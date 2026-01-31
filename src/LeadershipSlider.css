@@ -13,7 +13,7 @@ body {
 
 /* SECTION - EXACT */
 .expert-section {
-    padding: 100px 0;
+    padding: 35px 0;
     overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ body {
 /* INFO CARD - EXACT */
 .info-card {
     position: absolute;
-    right: 20px;
+    right: 28px;
     top: 75px;
     width: 390px;
     background: #fff;
@@ -130,4 +130,31 @@ body {
 /* Pause on hover */
 .slider:hover {
     animation-play-state: paused;
+}
+
+.elite-heading {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.elite-heading h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 400; /* Elite */
+  color: #ffffff;
+}
+
+.elite-heading h1 span {
+  font-weight: 700; /* Financial & Corporate Leadership */
+}
+
+.elite-heading p {
+  margin-top: 14px;
+  max-width: 820px;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #cfcfcf;
 }

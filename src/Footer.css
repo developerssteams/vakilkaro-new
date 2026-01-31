@@ -1,7 +1,9 @@
+/* ================= FOOTER ================= */
 .fo {
   background: #ffffff;
   padding: 1px 0;
 }
+
 .footer {
   background:#212121;
   color: #e0e0e0;
@@ -74,3 +76,59 @@
 .footer-col li {
   font-size: 13px;
   margin-bottom: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 25px;
+    margin: 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-brand {
+    grid-column: span 2; /* brand on top */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+    margin: 10px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+  }
+
+  .footer-col h4 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footer-col li {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}

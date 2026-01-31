@@ -63,43 +63,59 @@ const Advocates = () => {
     }, []);
 
     return (
-        <section className="expert-section">
-            {/* NO slider-container div - EXACT like HTML */}
-            <div className="slider" ref={sliderRef}>
-                {duplicatedExperts.map((expert, index) => (
-                    <div className="slide" key={`${expert.id}-${index}`}>
-                        {/* BACK IMAGE CARD - EXACT like HTML */}
-                        <div
-                            className="bg-card"
-                            style={{
-                                background: `url(${expert.bgImage}) center/cover no-repeat`
-                            }}
-                        ></div>
+        <>
 
-                        {/* PERSON IMAGE - EXACT like HTML */}
-                        <div className="person-img">
-                            <img
-                                src={expert.personImage}
-                                alt={expert.name}
-                            />
-                        </div>
 
-                        {/* INFO CARD - EXACT like HTML */}
-                        <div className="info-card">
-                            <div className="rating">
-                                ⭐ {expert.rating} <span>({expert.reviews})</span>
-                                <div className="arrow">›</div>
+
+
+            <section className="expert-section">
+                <div className="elite-heading">
+                    <h1>
+                        Top 10 Advocates. <span> One Standard</span>
+                    </h1>
+
+                    <p>
+                        Access the city's leading legal specialists. From high-stakes disputes to essential legal documentation,our Top 10 Lawyers deliver the clarity and results you deserve.
+                    </p>
+                </div>
+
+                {/* NO slider-container div - EXACT like HTML */}
+                <div className="slider" ref={sliderRef}>
+                    {duplicatedExperts.map((expert, index) => (
+                        <div className="slide" key={`${expert.id}-${index}`}>
+                            {/* BACK IMAGE CARD - EXACT like HTML */}
+                            <div
+                                className="bg-card"
+                                style={{
+                                    background: `url(${expert.bgImage}) center/cover no-repeat`
+                                }}
+                            ></div>
+
+                            {/* PERSON IMAGE - EXACT like HTML */}
+                            <div className="person-img">
+                                <img
+                                    src={expert.personImage}
+                                    alt={expert.name}
+                                />
                             </div>
 
-                            <h2>{expert.name}</h2>
+                            {/* INFO CARD - EXACT like HTML */}
+                            <div className="info-card">
+                                <div className="rating">
+                                    ⭐ {expert.rating} <span>({expert.reviews})</span>
+                                    <div className="arrow">›</div>
+                                </div>
 
-                            <p><strong>Experience :</strong> {expert.experience}</p>
-                            <p><strong>Expertise :</strong></p>
+                                <h2>{expert.name}</h2>
+
+                                <p><strong>Experience :</strong> {expert.experience}</p>
+                                <p><strong>Expertise :</strong></p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </section>
+        </>
     );
 };
 
