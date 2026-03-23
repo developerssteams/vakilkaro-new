@@ -65,9 +65,8 @@ const ScrollDriven = () => {
         <div className="text-box" ref={textBoxRef}>
           <h2>Scroll Driven Layout</h2>
           <p>
-            Jaise hi image choti hoti hai,
-            ye text niche se aakar
-            right side ki jagah fill karta hai.
+           vakilkaro.com par aapko milta hai ek unique scroll driven layout jaha,
+           
           </p>
         </div>
 

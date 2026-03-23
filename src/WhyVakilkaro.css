@@ -39,8 +39,8 @@
 .why-arrow {
     border: 1px solid #000;
     border-radius: 50%;
-    padding: 10px;
-    font-size: 22px;
+    padding: 8px;
+    /* font-size: 22px; */
     cursor: pointer;
 }
 
