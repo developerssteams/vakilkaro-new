@@ -37,7 +37,7 @@ function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className="rk-nav-desktop">
-                        <div className="rk-menu-item"><a href="#">About</a></div>
+                        <div className="rk-menu-item"><a href="#">About Us</a></div>
                         <div className="rk-menu-item"><a href="Verified">Verified Services</a></div>
                         <div className="rk-menu-item"><a href="#">Marketplace</a></div>
                         <div className="rk-menu-item"><a href="#">Learning</a></div>
