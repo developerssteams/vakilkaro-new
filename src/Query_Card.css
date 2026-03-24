@@ -1,0 +1,59 @@
+/* WRAPPER */
+.query-wrapper {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #1c1c1c;
+  overflow: hidden;
+}
+
+/* STACK */
+.query-stack {
+  position: relative;
+  width: 1200px;
+  height: 360px;
+}
+
+/* CARD */
+.query-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 24px;
+  padding: 50px 60px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  transition: all 0.5s ease;
+}
+
+/* ACTIVE */
+.query-card.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* STACK LOOK */
+.query-card:not(.active) {
+  transform: scale(0.96);
+  opacity: 0.85;
+}
+
+/* HIDE ANIMATION */
+.query-card.hide {
+  transform: translateY(-130%) scale(0.9);
+  opacity: 0;
+}
+
+/* TEXT */
+.query-card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.query-card p {
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+}

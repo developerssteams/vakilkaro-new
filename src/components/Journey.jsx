@@ -2,9 +2,9 @@ import "../Journey.css";
 
 const data = [
   { year: "2017", title: "Humble Beginnings\n& Pilot Launch", hover: "Started with a small idea 🚀", side: "left", color: "blue" },
-  { year: "2018", title: "Early Growth\n& Validation", hover: "First success and validation 📈", side: "right", color: "red" },
-  { year: "2019", title: "Market\nExpansion", hover: "Expanded into new markets 🌍", side: "left", color: "purple" },
-  { year: "2020", title: "Technology\nScaling", hover: "Upgraded tech & systems ⚙️", side: "right", color: "green" },
+  { year: "2018", title: "Expansion & Offcial Incorporation", hover: "First success and validation 📈", side: "right", color: "red" },
+  { year: "2019", title: "Crossing the 1 Crore Revenue Mark", hover: "Expanded into new markets 🌍", side: "left", color: "purple" },
+  { year: "2020", title: "Expansion & Offcial Incorporation", hover: "Upgraded tech & systems ⚙️", side: "right", color: "green" },
   { year: "2021", title: "Brand\nRecognition", hover: "People started recognizing us ⭐", side: "left", color: "orange" },
   { year: "2022", title: "Process\nOptimization", hover: "Improved internal processes 🔧", side: "right", color: "cyan" },
   { year: "2023", title: "Strategic\nPartnerships", hover: "Collaborations & partnerships 🤝", side: "left", color: "pink" },
@@ -18,7 +18,7 @@ const Journey = () => {
 <section className="journey-wrap">
 
       {/* 🔥 STICKY HEADING */}
-      <h2 className="journey-heading">Our Journey</h2>
+      <h6 className="journey-heading">The Vision  That   <br /> Drives Us</h6>
 
       {data.map((item, i) => (
         <div key={i} className={`journey-card ${item.side} ${item.color}`}>

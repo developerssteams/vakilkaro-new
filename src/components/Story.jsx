@@ -63,10 +63,12 @@ const ScrollDriven = () => {
 
         {/* TEXT RIGHT */}
         <div className="text-box" ref={textBoxRef}>
-          <h2>Scroll Driven Layout</h2>
+          <h2>The Vakilkaro Story:</h2>
+
+          <b>Built for You</b>
           <p>
-           vakilkaro.com par aapko milta hai ek unique scroll driven layout jaha,
-           
+            We are on a mission to make Entrepreneurship easier and affordable to millions. IndiaFilings provides a simple and intuitive platform for setting up a business and managing compliance. We started our journey in 2014 and bootstrapped the business till 2022, serving over 1 lakh businesses. In 2022, we raised funding from institutional investors to further our mission.
+
           </p>
         </div>
 

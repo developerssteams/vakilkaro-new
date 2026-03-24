@@ -8,19 +8,21 @@
   position: relative;
   gap: 50px;
 }
+
 .journey-heading {
   position: sticky;
   top: 80px;
-
-  font-size: 120px;
-  font-weight: 800;
+  font-size: 80px !important;
+  font-weight: 500 !important ;
   text-align: center;
 
-  color: rgba(255,255,255,0.06); /* light behind effect */
+  color: rgba(255, 255, 255, 0.06);
+  /* light behind effect */
 
   z-index: 0;
   pointer-events: none;
 }
+
 /* MAIN CARD */
 .journey-card {
   width: 520px;
@@ -33,6 +35,7 @@
   display: flex;
   align-items: flex-end;
 }
+
 /* ================= SCROLL EFFECT ================= */
 /* ================= HEADING ================= */
 
@@ -44,13 +47,10 @@
 .journey-heading {
   position: sticky;
   top: 80px;
-
   font-size: 120px;
   font-weight: 800;
   text-align: center;
-
-  color:white;
-
+  color: white;
   z-index: 0;
   pointer-events: none;
 }
@@ -68,10 +68,8 @@
   position: absolute;
   inset: 0;
   padding: 26px 30px;
-
   display: flex;
   align-items: flex-end;
-
   transition: transform 0.6s ease, opacity 0.4s ease;
 }
 
@@ -119,6 +117,7 @@
   position: relative;
   z-index: 2;
 }
+
 /* FOLDER TAB */
 .journey-card::before {
   content: "";

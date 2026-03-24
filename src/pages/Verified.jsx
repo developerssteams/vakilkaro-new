@@ -21,23 +21,28 @@ import VakilKaroWay from "../components/VakilKaroWay";
 import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import Faq from "../components/Faq";
-import Navbar from "../components/Navbar";
-function Home() {
+import Navbar_Section from "../components/Navbar_Section";
+import Query_Card from "../components/Query_Card";
+import Trademark_Registration from "../components/Trademark_Registration";
+function Verified() {
     return (
         <>
-            <Navbar />
-            <VerifiedServices />
-            <LegalRepresentation />
-            <Partner />
-            <Journey />
+
+            {/* <VerifiedServices /> */}
+            {/* <LegalRepresentation /> */}
+            {/* <Partner /> */}
+            {/* <Journey /> */}
+            <Navbar_Section />
+            <Query_Card />
+            <Trademark_Registration />
+            {/* <WhyVakilkaro /> */}
+            {/* <CallToAction /> */}
             <Story />
             {/* <StorySection /> */}
             {/* <ServiceSlider /> */}
-            <WhyVakilkaro />
-            <CallToAction />
             {/* <ExpertSlider /> */}
             {/* <Advocates /> */}
-            <VakilKaroWay />
+            {/* <VakilKaroWay /> */}
             <Testimonials />
             <ContactSection />
             <Faq />
@@ -51,5 +56,4 @@ function Home() {
         </>
     );
 }
-
-export default Home;
+export default Verified;
