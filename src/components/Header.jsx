@@ -38,7 +38,10 @@ function Header() {
                     {/* Desktop Navigation */}
                     <nav className="rk-nav-desktop">
                         <div className="rk-menu-item"><a href="#">About Us</a></div>
-                        <div className="rk-menu-item"><a href="Verified">Verified Services</a></div>
+                        {/* <div className="rk-menu-item"><a href="Verified">Verified Services</a></div> */}
+                        <div className="rk-menu-item">
+                            <Link to="/Verified">Verified Services</Link>
+                        </div>
                         <div className="rk-menu-item"><a href="#">Marketplace</a></div>
                         <div className="rk-menu-item"><a href="#">Learning</a></div>
                         <div className="rk-menu-item pill-btn"><a href="#">Become Partner</a></div>
@@ -93,7 +96,7 @@ function Header() {
                 {menuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
             </header>
 
-          
+
         </>
     );
 }

@@ -1,6 +1,6 @@
 import "../Trademark_Registration.css";
 import { FiArrowUpRight } from "react-icons/fi";
-import ctaImg from "call_to_action.png";
+import ctaImg from "../assets/call_to_action.png";
 
 const CallToAction = () => {
     return (

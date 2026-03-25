@@ -11,7 +11,7 @@
             rgba(244, 245, 248, 0.95) 0%,
             rgba(244, 245, 248, 0.85) 40%,
             rgba(255, 255, 255, 0) 65%),
-        url("call_to_action.png");
+        url("../assets/call_to_action.png");
 
     background-size: cover;
     background-position: right center;
