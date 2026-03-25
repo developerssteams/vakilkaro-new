@@ -41,7 +41,7 @@ function Header() {
                         <div className="rk-menu-item"><a href="#">About Us</a></div>
                         {/* <div className="rk-menu-item"><a href="Verified">Verified Services</a></div> */}
                         <div className="rk-menu-item">
-                            <Link to="Verified">Verified Services</Link>
+                            <Link to="/verified">Verified Services</Link>
                         </div>
                         <div className="rk-menu-item"><a href="#">Marketplace</a></div>
                         <div className="rk-menu-item"><a href="#">Learning</a></div>
