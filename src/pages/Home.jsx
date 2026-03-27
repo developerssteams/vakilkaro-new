@@ -35,9 +35,9 @@ function Home() {
             {/* <ServiceSlider /> */}
             <WhyVakilkaro />
             <CallToAction />
-            {/* <ExpertSlider /> */}
             {/* <Advocates /> */}
             <VakilKaroWay />
+            <ExpertSlider />
             <Testimonials />
             <ContactSection />
             <Faq />

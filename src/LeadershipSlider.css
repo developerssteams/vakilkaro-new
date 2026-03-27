@@ -1,160 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
+.leadership {
     background: #212121;
+    padding: 60px 0;
+    color: #fff;
 }
 
-/* SECTION - EXACT */
-.expert-section {
-    padding: 35px 0;
+/* HEADING */
+.leadership-heading {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.leadership-heading h2 {
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.leadership-heading h2 span {
+    font-weight: 700;
+}
+
+.leadership-heading p {
+    margin-top: 12px;
+    max-width: 750px;
+    color: #bbb;
+    font-size: 15px;
+}
+
+/* GRID */
+.leadership-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* CARD */
+.leadership-card {
     overflow: hidden;
+    transition: 0.3s;
 }
 
-/* SLIDER - EXACT */
-.slider {
-    display: flex;
-    gap: 80px;
-    width: max-content;
-    animation: slide 10s linear infinite;
-    /* 30 seconds = slower */
-}
-
-/* SINGLE SLIDE - EXACT */
-.slide {
-    position: relative;
-    width: 620px;
-    height: 360px;
-}
-
-/* BACK IMAGE CARD - EXACT */
-.bg-card {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    width: 400px;
-    height: 260px;
-    background: url("../assets/bg-card.png") center/cover no-repeat;
+.leadership-card img {
     border-radius: 18px;
-    z-index: 1;
 }
 
-/* PERSON IMAGE - EXACT POSITION */
-.person-img {
-    position: absolute;
-    top: -20px;
-    right: 340px;
-    z-index: 4;
+.leadership-card:hover {
+    transform: translateY(-5px);
 }
 
-.person-img img {
-    height: 315px;
-    width: auto;
-    display: block;
+/* IMAGE */
+.leadership-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* INFO CARD - EXACT */
-.info-card {
-    position: absolute;
-    right: 28px;
-    top: 75px;
-    width: 390px;
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px 73px;
-    z-index: 3;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+
+.tag {
+    font-size: 12px;
+    color: #aaa;
 }
 
-/* RATING - EXACT */
-.rating {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.leadership-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.leadership-content p {
     font-size: 14px;
-    color: #f5a623;
-    margin-bottom: 14px;
+    color: #bbb;
+    margin-bottom: 15px;
 }
 
-.rating span {
-    color: #777;
-    font-size: 13px;
-}
-
-.arrow {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border: 1px solid #ddd;
+/* BUTTON */
+.read-btn {
+    background: none;
+    border: none;
+    color: #f5c518;
+    cursor: pointer;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #333;
+    gap: 6px;
+}
+
+.read-btn span {
     font-size: 18px;
 }
 
-/* TEXT - EXACT */
-.info-card h2 {
-    font-size: 25px !important;
-    /* 👈 yahan kam–zyada karo */
-    font-weight: 500;
-    /* bold ke liye */
-    margin-bottom: 14px;
+.leadership {
+    background: #212121;
+    padding: 60px 0;
+    color: #fff;
+}
+
+/* GRID */
+.leadership-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ITEM WRAPPER */
+.leadership-item {
+    position: relative;
+}
+
+/* IMAGE CARD */
+.image-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* TEXT CARD (FLOATING) */
+.text-card {
+    background: #fff;
     color: #111;
+    border-radius: 18px;
+    padding: 18px;
+    margin-top: -50px;
+    /* 👈 overlap effect */
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* TEXT */
+.tag {
+    font-size: 12px;
+    color: #777;
+}
 
-.info-card p {
+.text-card h3 {
+    font-size: 17px;
+    margin: 8px 0;
+}
+
+.text-card p {
     font-size: 14px;
-    color: #333;
-    margin-bottom: 8px;
+    color: #555;
+    margin-bottom: 12px;
 }
 
-/* SLIDE ANIMATION - EXACT */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Pause on hover */
-.slider:hover {
-    animation-play-state: paused;
-}
-
-.elite-heading {
-  max-width: 1200px;
-  margin: 0 auto 80px;
-  padding: 0 20px;
-}
-
-.elite-heading h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 48px;
-  line-height: 1.15;
-  font-weight: 400; /* Elite */
-  color: #ffffff;
-}
-
-.elite-heading h1 span {
-  font-weight: 700; /* Financial & Corporate Leadership */
-}
-
-.elite-heading p {
-  margin-top: 14px;
-  max-width: 820px;
-  font-size: 15px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #cfcfcf;
+/* BUTTON */
+.read-btn {
+    background: none;
+    border: none;
+    color: #f5c518;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

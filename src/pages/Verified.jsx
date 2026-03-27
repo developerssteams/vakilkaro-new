@@ -10,6 +10,9 @@ import Faq from "../components/Faq";
 import Navbar_Section from "../components/Navbar_Section";
 import Query_Card from "../components/Query_Card";
 import Trademark_Registration from "../components/Trademark_Registration";
+import StartupDocument from "../components/StartupDocument";
+import VerifiedServicescontent from "../components/VerifiedServicescontent";
+import LeadershipSlider from "../components/LeadershipSlider";
 function Verified() {
     return (
         <>
@@ -17,13 +20,16 @@ function Verified() {
             <Navbar_Section />
             <Query_Card />
             <Trademark_Registration />
-    
-            <Story />
-        
+            <StartupDocument />
+            <VerifiedServicescontent />
+            <LeadershipSlider />
+
+            {/* <Story /> */}
+
             <Testimonials />
             <ContactSection />
             <Faq />
-       
+
             <TawkTo />
 
 

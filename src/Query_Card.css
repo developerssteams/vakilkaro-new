@@ -1,19 +1,15 @@
-/* WRAPPER */
 .query-wrapper {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  background: #212121;
   padding: 40px;
-  background: #1c1c1c;
-  overflow: hidden;
 }
 
 /* STACK */
 .query-stack {
   position: relative;
   width: 1200px;
-  height: 360px;
+  height: 400px;
+  margin: auto;
 }
 
 /* CARD */
@@ -22,38 +18,105 @@
   width: 100%;
   height: 100%;
   background: #fff;
-  border-radius: 24px;
-  padding: 50px 60px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
   transition: all 0.5s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
-/* ACTIVE */
+/* LEFT */
+.queryleft {
+  width: 55%;
+}
+
+.queryleft h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #e5e5e5;
+  cursor: pointer;
+}
+
+.tabs .active-tab {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+/* FORM */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  grid-column: span 2;
+  background: black;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+/* .queryright {
+  width: 40% ;
+} */
+
+.queryright img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* ANIMATION */
 .query-card.active {
   transform: translateY(0) scale(1);
   opacity: 1;
 }
 
-/* STACK LOOK */
 .query-card:not(.active) {
-  transform: scale(0.96);
-  opacity: 0.85;
+  transform: scale(0.95);
+  opacity: 0.8;
 }
 
-/* HIDE ANIMATION */
 .query-card.hide {
-  transform: translateY(-130%) scale(0.9);
+  transform: translateY(-120%) scale(0.9);
   opacity: 0;
 }
 
-/* TEXT */
-.query-card h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
+/* VIDEO */
+.video-section {
+  width: 1200px;
+  height: 400px;
+  margin: 40px auto 0;
 }
 
-.query-card p {
-  color: #555;
-  line-height: 1.6;
-  max-width: 600px;
+.video-section iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }

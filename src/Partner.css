@@ -43,15 +43,26 @@
   background: white;
   color: black;
   border: none;
-  padding: 14px 28px;
+  padding: 5px 10px;
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 18px;
 }
 
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #f2f2f2; /* light gray circle */
+   border: 1px solid black;
+  border-radius: 50%;
+  font-size: 16px;
+}
 /* ================= IMAGE LAYOUT ================= */
 
 .partner-wrapper {

@@ -57,6 +57,7 @@ const VerifiedServices = () => {
             <span className="vs-arrow">
               <FiArrowUpRight />
             </span>
+            
           </div>
         ))}
       </div>

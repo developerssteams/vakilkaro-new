@@ -39,8 +39,15 @@
   color: #ffc107;
 }
 
-.quote.left { left: 0; top: -20px; }
-.quote.right { right: 0; bottom: -40px; }
+.quote.left {
+  left: 0;
+  top: -20px;
+}
+
+.quote.right {
+  right: 0;
+  bottom: -40px;
+}
 
 .users {
   display: flex;
@@ -92,15 +99,26 @@
 
 .nav {
   position: absolute;
-  top: 55%;
+  top: 50%;
+  transform: translateY(-50%);
+
   background: #fff;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav.prev { left: 40px; }
-.nav.next { right: 40px; }
+.nav.prev {
+  left: 40px;
+}
+
+.nav.next {
+  right: 40px;
+}

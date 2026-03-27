@@ -1,181 +1,118 @@
-.trademark_registration-cta-section {
-    background: #212121;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-/* MAIN CARD */
-.trademark_registration-cta-inner {
-    position: relative;
-    background:
-        linear-gradient(to right,
-            rgba(244, 245, 248, 0.95) 0%,
-            rgba(244, 245, 248, 0.85) 40%,
-            rgba(255, 255, 255, 0) 65%),
-        url("../assets/call_to_action.png");
-
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
-
-    border-radius: 28px;
-    padding: 70px 35px;
+/* SECTION BACKGROUND */
+.trademark_registration-protocol-section {
+    margin: 20px 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    
+}
+
+/* CONTAINER */
+.trademark_registration-protocol-container {
     max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    min-height: 420px;
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 22px;
+    padding: 40px 30px;
 }
 
-/* LEFT CONTENT */
-.trademark_registration-cta-content {
-    max-width: 520px;
-    z-index: 2;
-}
-
-.trademark_registration-cta-content h2 {
-    font-size: 42px;
+/* TITLE */
+.trademark_registration-protocol-container h2 {
+    font-size: 36px;
     font-weight: 400;
-    color: #000;
-    line-height: 1.2;
+    margin-bottom: 30px;
 }
 
-.trademark_registration-cta-content h2 span {
+.trademark_registration-protocol-container h2 span {
     font-weight: 700;
 }
 
-.trademark_registration-cta-content p {
-    margin-top: 16px;
-    font-size: 15px;
-    color: #555;
-    max-width: 420px;
+/* GRID */
+.trademark_registration-protocol-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-/* BUTTONS */
-.trademark_registration-cta-buttons {
-    margin-top: 28px;
-    display: flex;
-    gap: 16px;
-}
-
-.trademark_registration-btn {
-    padding: 12px 22px;
-    border-radius: 50px;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-}
-
-.trademark_registration-btn.primary {
-    background: #000;
+/* CARD */
+.trademark_registration-card {
+    border-radius: 14px;
+    padding: 25px 20px;
     color: #fff;
-    border: none;
-}
-
-.trademark_registration-btn.outline {
-    background: transparent;
-    border: 1px solid #000;
-    color: #000;
-}
-
-/* RIGHT IMAGE */
-.trademark_registration-cta-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 46%;
+    min-height: 170px;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.trademark_registration-cta-image img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
+/* ICON */
+.trademark_registration-card .icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+    height: 55px;
+    width: 55px;
+}
+
+
+/* TEXT */
+.trademark_registration-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.trademark_registration-card p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* COLORS */
+.trademark_registration-card.blue {
+    background: linear-gradient(135deg, #2c2cff, #1a1abf);
+}
+
+.trademark_registration-card.red {
+    background: linear-gradient(135deg, #ff1e3c, #c4001d);
+}
+
+.trademark_registration-card.purple {
+    background: linear-gradient(135deg, #9c27ff, #6a00d1);
+}
+
+.trademark_registration-card.orange {
+    background: linear-gradient(135deg, #ff4d1c, #cc2f00);
 }
 
 /* RESPONSIVE */
 
-/* Large Tablets */
+/* Tablet */
 @media (max-width: 1024px) {
-    .trademark_registration-cta-inner {
-        padding: 60px 30px;
-        min-height: 380px;
-    }
-
-    .trademark_registration-cta-content h2 {
-        font-size: 34px;
-    }
-
-    .trademark_registration-cta-image {
-        width: 48%;
-    }
-}
-
-/* Tablets */
-@media (max-width: 900px) {
-    .trademark_registration-cta-inner {
-        flex-direction: column;
-        padding: 50px 25px;
-        text-align: center;
-        min-height: auto;
-
-        background:
-            linear-gradient(180deg,
-                rgba(244, 245, 248, 0.98) 0%,
-                rgba(244, 245, 248, 0.95) 100%);
-    }
-
-    .trademark_registration-cta-content {
-        max-width: 100%;
-    }
-
-    .trademark_registration-cta-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .trademark_registration-cta-image {
-        position: static;
-        width: 100%;
-        margin-top: 30px;
-        justify-content: center;
-    }
-
-    .trademark_registration-cta-image img {
-        height: auto;
-        width: 300px;
-        max-width: 90%;
+    .trademark_registration-protocol-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-    .trademark_registration-cta-inner {
-        padding: 40px 20px;
-        border-radius: 20px;
+    .trademark_registration-protocol-container {
+        padding: 25px 20px;
     }
 
-    .trademark_registration-cta-content h2 {
-        font-size: 26px;
+    .trademark_registration-protocol-container h2 {
+        font-size: 24px;
     }
 
-    .trademark_registration-cta-buttons {
-        flex-direction: column;
+    .trademark_registration-protocol-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    .trademark_registration-btn {
-        width: 100%;
-        justify-content: center;
-    }
+.trademark_registration-banner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .trademark_registration-cta-image img {
-        width: 240px;
-    }
+.trademark_registration-banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
 }

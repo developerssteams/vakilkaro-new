@@ -1,0 +1,95 @@
+.startupdocument-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.startupdocument-container {
+    max-width: 1200px;
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LEFT */
+.startupdocument-left {
+    flex: 1;
+}
+
+.startupdocument-left h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.startupdocument-left h2 span {
+    font-weight: 700;
+}
+
+.startupdocument-left p {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* RIGHT */
+.startupdocument-right {
+    flex: 1;
+    background: #0fa38a;
+    border-radius: 20px;
+    padding: 25px;
+    color: #fff;
+}
+
+/* Tabs */
+.startupdocument-tabs {
+    display: flex;
+    gap: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+
+.startupdocument-tabs button {
+    background: transparent;
+    border: none;
+    color: #d9fdf6;
+    font-size: 18px;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.startupdocument-tabs button.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Pills */
+.startupdocument-pills {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.startupdocument-pills span {
+    background: #e6f7f3;
+    color: #0fa38a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .startupdocument-container {
+        flex-direction: column;
+    }
+
+    .startupdocument-left h2 {
+        font-size: 28px;
+    }
+}

@@ -1,121 +1,71 @@
-import React, { useEffect, useRef } from 'react';
-import '../LeadershipSlider.css';
-import bgCardImage from '../assets/bg-card.png';
-import personImage from '../assets/person.png';
+import React from "react";
+import "../LeadershipSlider.css";
 
-const ExpertSlider = () => {
-    const sliderRef = useRef(null);
-    const animationDuration = 10;
+const data = [
+  {
+    img: "https://images.unsplash.com/photo-1555374018-13a8994ab246",
+    title: "Lorem Ipsum Is Not Simply Random",
+    desc: "Lorem Ipsum is not simply random text. It has roots in classical literature from 45 BC."
+  },
+  {
+    img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
+    title: "Lorem Ipsum Is Not Simply Random",
+    desc: "Lorem Ipsum is not simply random text. It has roots in classical literature from 45 BC."
+  },
+  {
+    img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
+    title: "Lorem Ipsum Is Not Simply Random",
+    desc: "Lorem Ipsum is not simply random text. It has roots in classical literature from 45 BC."
+  },
+  {
+    img: "https://images.unsplash.com/photo-1519681393784-d120267933ba",
+    title: "Lorem Ipsum Is Not Simply Random",
+    desc: "Lorem Ipsum is not simply random text. It has roots in classical literature from 45 BC."
+  }
+];
 
-    const experts = [
-        {
-            id: 1,
-            name: "CA Rupal Saini",
-            rating: 5.0,
-            reviews: 856,
-            experience: "10+ Years",
-            bgImage: bgCardImage,
-            personImage: personImage
-        },
-        {
-            id: 2,
-            name: "CA Vikram Singh",
-            rating: 4.9,
-            reviews: 720,
-            experience: "12+ Years",
-            bgImage: bgCardImage,
-            personImage: personImage
-        },
-        {
-            id: 3,
-            name: "CA Priya Sharma",
-            rating: 5.0,
-            reviews: 932,
-            experience: "8+ Years",
-            bgImage: bgCardImage,
-            personImage: personImage
-        },
-        {
-            id: 4,
-            name: "CA Rajat Verma",
-            rating: 4.8,
-            reviews: 645,
-            experience: "15+ Years",
-            bgImage: bgCardImage,
-            personImage: personImage
-        }
-    ];
+const LeadershipSection = () => {
+  return (
+    <section className="leadership">
+      
+      {/* Heading */}
+      <div className="leadership-heading">
+        <h2>
+          Stay Informed, <span>Stay Compliant</span>
+        </h2>
+        <p>
+          Your definitive and comprehensive resource for decoding the complex web
+          of laws, regulations, and policies that directly influence business growth.
+        </p>
+      </div>
 
-    // Duplicate for seamless looping - EXACTLY like HTML
-    const duplicatedExperts = [...experts, ...experts];
+      {/* Cards */}
+      <div className="leadership-grid">
+        {data.map((item, i) => (
+          <div className="leadership-card" key={i}>
+            
+            {/* IMAGE */}
+            <img src={`${item.img}?auto=format&fit=crop&w=800&q=80`} alt="" />
 
-    useEffect(() => {
-        const slider = sliderRef.current;
-        if (!slider) return;
+            {/* TEXT BELOW IMAGE */}
+            <div className="leadership-content">
+              <span className="tag">Lorem Ipsum is not simply random</span>
 
-        // EXACT animation like HTML (18s linear infinite)
-        slider.style.animation = 'slide 18s linear infinite';
+              <h3>{item.title}</h3>
 
-        // Cleanup
-        return () => {
-            slider.style.animation = '';
-        };
-    }, []);
+              <p>{item.desc}</p>
 
-    return (
-        <>
-
-            <section className="expert-section">
-                   <div className="elite-heading">
-                <h1>
-                    Elite <span>Financial & Corporate Leadership</span>
-                </h1>
-
-                <p>
-                    We believe that every business deserves world-class guidance. That’s why
-                    we’ve curated a powerhouse team of 10 industry-leading CA and CS
-                    professionals.
-                </p>
+              <button className="read-btn">
+                Learn More <span>›</span>
+              </button>
             </div>
 
-                {/* NO slider-container div - EXACT like HTML */}
-                <div className="slider" ref={sliderRef}>
-                    {duplicatedExperts.map((expert, index) => (
-                        <div className="slide" key={`${expert.id}-${index}`}>
-                            {/* BACK IMAGE CARD - EXACT like HTML */}
-                            <div
-                                className="bg-card"
-                                style={{
-                                    background: `url(${expert.bgImage}) center/cover no-repeat`
-                                }}
-                            ></div>
+          </div>
+        ))}
+      </div>
 
-                            {/* PERSON IMAGE - EXACT like HTML */}
-                            <div className="person-img">
-                                <img
-                                    src={expert.personImage}
-                                    alt={expert.name}
-                                />
-                            </div>
-
-                            {/* INFO CARD - EXACT like HTML */}
-                            <div className="info-card">
-                                <div className="rating">
-                                    ⭐ {expert.rating} <span>({expert.reviews})</span>
-                                    <div className="arrow">›</div>
-                                </div>
-
-                                <h2>{expert.name}</h2>
-
-                                <p><strong>Experience :</strong> {expert.experience}</p>
-                                <p><strong>Expertise :</strong></p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        </>
-    );
+    </section>
+  );
 };
 
-export default ExpertSlider;
+export default LeadershipSection;
