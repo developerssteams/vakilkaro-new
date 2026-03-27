@@ -33,8 +33,11 @@ function Header() {
                 <div className="rk-box">
                     {/* Logo */}
                     <div className="rk-left">
-                        <img src={logo} alt="logo" className="rk-logo" />
+                        <Link to="/">
+                            <img src={logo} alt="logo" className="rk-logo" />
+                        </Link>
                     </div>
+
 
                     {/* Desktop Navigation */}
                     <nav className="rk-nav-desktop">

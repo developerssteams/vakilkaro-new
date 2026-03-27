@@ -16,7 +16,7 @@ const CallToAction = () => {
                     <img src={ctaImg} alt="Banner" />
                 </div>
             </section>
-            <br />
+         
 
             {/* VERIFIED PROTOCOL SECTION */}
             <section className="trademark_registration-protocol-section">

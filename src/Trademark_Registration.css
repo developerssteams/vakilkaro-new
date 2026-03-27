@@ -5,6 +5,9 @@
     justify-content: center;
     
 }
+.trademark_registration-cta-section{
+    background-color: #212121;
+}
 
 /* CONTAINER */
 .trademark_registration-protocol-container {
@@ -20,6 +23,7 @@
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 30px;
+    color: black
 }
 
 .trademark_registration-protocol-container h2 span {
