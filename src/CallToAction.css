@@ -1,52 +1,50 @@
 .cta-section {
-    background: #212121;
-    
+    /* background: #1f1f1f; */
+    padding: 30 px 20px;
 }
 
-/* MAIN CARD */
+/* CARD */
 .cta-inner {
     position: relative;
-    background:
-        linear-gradient(to right,
-            rgba(244, 245, 248, 0.95) 0%,
-            rgba(244, 245, 248, 0.85) 40%,
-            rgba(255, 255, 255, 0) 65%),
-        url("../assets/call_to_action.png");
-
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
-
-    border-radius: 28px;
-    padding: 70px 35px;
-    display: flex;
-    align-items: center;
     max-width: 1200px;
     margin: auto;
+    border-radius: 28px;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 90px;
+
+    background: linear-gradient(to right,
+            #f4f5f8 0%,
+            #f4f5f8 45%,
+            rgba(255, 255, 255, 0) 75%);
+
     min-height: 420px;
 }
 
-
-/* LEFT CONTENT */
+/* CONTENT */
 .cta-content {
-    max-width: 520px;
+    max-width: 540px;
     z-index: 2;
 }
 
+/* HEADING */
 .cta-content h2 {
-    font-size: 42px;
-    font-weight: 400;
-    color: #000;
-    line-height: 1.2;
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 300;
+    color: #111;
 }
 
 .cta-content h2 span {
-    font-weight: 700;
+    font-weight: 800;
 }
 
+/* TEXT */
 .cta-content p {
-    margin-top: 16px;
+    margin-top: 18px;
     font-size: 15px;
     color: #555;
     max-width: 420px;
@@ -54,129 +52,97 @@
 
 /* BUTTONS */
 .cta-buttons {
-    margin-top: 28px;
+    margin-top: 32px;
     display: flex;
-    gap: 16px;
+    gap: 18px;
 }
 
-.btn {
-    padding: 12px 22px;
-    border-radius: 50px;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-}
-
-.btn.primary {
+/* CALL BUTTON */
+.cta-btn-primary {
     background: #000;
     color: #fff;
     border: none;
+    padding: 13px 26px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-.btn.outline {
-    background: transparent;
+/* WHATSAPP BUTTON */
+.cta-btn-outline {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+/* ICON CIRCLE */
+.cta-icon {
+    width: 28px;
+    height: 28px;
     border: 1px solid #000;
-    color: #000;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
 }
 
-/* RIGHT IMAGE */
+/* IMAGE */
 .cta-image {
     position: absolute;
     right: 0;
     bottom: 0;
-    top: 0;
-    width: 46%;
+    height: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+
 }
 
 .cta-image img {
     height: 100%;
     width: auto;
+    /* object-fit: contain; */
     object-fit: cover;
+    /* 🔥 MAIN FIX */
 }
 
-/* RESPONSIVE */
-/* ============================== */
-/*        RESPONSIVE CTA         */
-/* ============================== */
+/* ================= RESPONSIVE ================= */
 
-/* Large Tablets */
-@media (max-width: 1024px) {
-    .cta-inner {
-        padding: 60px 30px;
-        min-height: 380px;
-    }
-
-    .cta-content h2 {
-        font-size: 34px;
-    }
-
-    .cta-image {
-        width: 48%;
-    }
-}
-
-/* Tablets & Small Screens */
 @media (max-width: 900px) {
     .cta-inner {
         flex-direction: column;
-        padding: 50px 25px;
         text-align: center;
-        min-height: auto;
-
-        /* Remove background image on mobile layout */
-        background:
-            linear-gradient(180deg,
-                rgba(244, 245, 248, 0.98) 0%,
-                rgba(244, 245, 248, 0.95) 100%);
-    }
-
-    .cta-content {
-        max-width: 100%;
-    }
-
-    .cta-content p {
-        max-width: 100%;
+        padding: 50px 25px;
     }
 
     .cta-buttons {
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .cta-image {
         position: static;
-        width: 100%;
         margin-top: 30px;
-        justify-content: center;
     }
 
     .cta-image img {
+        width: 280px;
         height: auto;
-        width: 300px;
-        max-width: 90%;
     }
 }
 
-/* Mobiles */
 @media (max-width: 600px) {
-    .cta-inner {
-        padding: 40px 20px;
-        border-radius: 20px;
-    }
-
     .cta-content h2 {
-        font-size: 26px;
-        line-height: 1.25;
-    }
-
-    .cta-content p {
-        font-size: 14px;
+        font-size: 30px;
     }
 
     .cta-buttons {
@@ -184,20 +150,9 @@
         gap: 12px;
     }
 
-    .btn {
+    .cta-btn-primary,
+    .cta-btn-outline {
         width: 100%;
         justify-content: center;
-        padding: 13px 20px;
-    }
-
-    .cta-image img {
-        width: 240px;
-    }
-}
-
-/* Very Small Phones */
-@media (max-width: 400px) {
-    .cta-content h2 {
-        font-size: 23px;
     }
 }

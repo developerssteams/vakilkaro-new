@@ -10,7 +10,7 @@
 
 /* SECTION */
 .hero-sectionn {
-  height: 250vh;        /* bas itna hi scroll chahiye */
+  height: 250vh; 
 }
 
 /* STICKY */
@@ -25,16 +25,18 @@
 
 /* IMAGE LEFT */
 .image-box {
-  width: 100vw;
-  height: 130vh;
+  /* width: 100vw; */
+  /* height: 130vh; */
   flex-shrink: 0;
   order: 1;
+ 
 }
 
 .image-box img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 15px;
 }
 
 /* TEXT RIGHT */
@@ -45,4 +47,57 @@
   transform: translateY(120px);
   order: 2;
   color: white;
+}
+
+.text-box h1 {
+  
+  /* margin-bottom: 20px; */
+  font-weight: 350;
+}
+.text-box b {
+  font-size: 1.5rem;
+  /* margin-bottom: 10px; */
+  display: block;
+}
+.text-box p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+
+
+.vs-header-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  /* 🔥 perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.vs-header-icon:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* icon size fix */
+.vs-header-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+
+p {
+  display: flex;
+  align-items: center;   /* vertical center */
+  gap: 20px;              /* text aur icon ke beech space */
 }

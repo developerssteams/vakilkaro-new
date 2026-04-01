@@ -79,14 +79,14 @@
   text-align: right;
 }
 
-.submit-btn {
+.contact-submit-btn {
   background: #000;
   color: #fff;
-  padding: 14px 26px;
+  padding: 10px 26px !important;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* RIGHT */

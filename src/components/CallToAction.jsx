@@ -1,13 +1,12 @@
 import "../CallToAction.css";
 import { FiArrowUpRight } from "react-icons/fi";
-import ctaImg from "../assets/call_to_action.png";
+import ctaImg from "../assets/call_to_action1.png";
 
 const CallToAction = () => {
     return (
         <section className="cta-section">
             <div className="cta-inner">
 
-                {/* LEFT CONTENT */}
                 <div className="cta-content">
                     <h2>
                         Expert Advice,<br />
@@ -19,15 +18,17 @@ const CallToAction = () => {
                     </p>
 
                     <div className="cta-buttons">
-                        <button className="btn primary">Call Us</button>
+                        <button className="cta-btn-primary">Call Us</button>
 
-                        <button className="btn outline">
-                            Whatsapp <FiArrowUpRight />
+                        <button className="cta-btn-outline">
+                            Whatsapp 
+                            <span className="cta-icon">
+                                <FiArrowUpRight />
+                            </span>
                         </button>
                     </div>
                 </div>
 
-                {/* RIGHT IMAGE */}
                 <div className="cta-image">
                     <img src={ctaImg} alt="Expert Support" />
                 </div>

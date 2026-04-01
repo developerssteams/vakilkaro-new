@@ -9,10 +9,11 @@
     max-width: 1200px;
     margin: 0 auto 50px;
     padding: 0 20px;
+    margin-bottom: 5px;
 }
 
 .leadership-heading h2 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 400;
 }
 
@@ -21,10 +22,10 @@
 }
 
 .leadership-heading p {
-    margin-top: 12px;
+    margin-top: 5px;
     max-width: 750px;
     color: #bbb;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* GRID */
@@ -67,14 +68,14 @@
 
 .leadership-content h3 {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 5px 0;
     line-height: 1.4;
 }
 
 .leadership-content p {
     font-size: 14px;
     color: #bbb;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 /* BUTTON */

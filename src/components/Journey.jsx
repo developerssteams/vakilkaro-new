@@ -15,7 +15,7 @@ const data = [
 
 const Journey = () => {
   return (
-<section className="journey-wrap">
+    <section className="journey-wrap">
 
       {/* 🔥 STICKY HEADING */}
       <h6 className="journey-heading">The Vision  That   <br /> Drives Us</h6>

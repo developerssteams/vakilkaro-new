@@ -35,25 +35,31 @@ const LegalRepresentation = () => {
 
   return (
     <section className="legal-section">
-      
+
       {/* ===== HEADING STRIP ===== */}
-     
+
 
       {/* ===== SUB HEADER ===== */}
       <div className="legal-header">
-         <div className="verified-strip">
-        <h1>
-          Specialized <span> Legal Representation </span>
-        </h1>
-      </div>
-        <h2>
-         
-        </h2>
+
+        <div className="legalrep-top">
+          <div className="verified-strip">
+            <h1>
+              Specialized <span> Legal Representation </span>
+            </h1>
+          </div>
+
+          <span className="legalrep-icon">
+            <FiArrowUpRight />
+          </span>
+        </div>
+
         <p>
           All-in-one platform for online legal consultation, business
           incorporation, corporate compliance, and startup-friendly
           solutions—tailored for every industry.
         </p>
+
       </div>
 
       {/* ===== SLIDER ===== */}

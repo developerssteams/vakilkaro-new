@@ -31,10 +31,10 @@ const ContactSection = () => {
               </span>
             </label>
 
-            <div className="captcha">11 + 11 =</div>
+           
           </div>
 
-          <button className="submit-btn">Request A Callback</button>
+          <button className="contact-submit-btn">Request A Callback</button>
         </div>
 
         {/* RIGHT INFO CARD */}
@@ -50,7 +50,7 @@ const ContactSection = () => {
           </p>
 
           <div className="contact-person">
-            <h4>Connect with Khushi</h4>
+            <h4>Connect with Expert</h4>
 
             <div className="contact-details">
               <div>

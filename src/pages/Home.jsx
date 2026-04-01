@@ -22,12 +22,14 @@ import Testimonials from "../components/Testimonials";
 import ContactSection from "../components/ContactSection";
 import Faq from "../components/Faq";
 import Navbar from "../components/Navbar";
+import News from "../components/News";
 function Home() {
     return (
         <>
             <Navbar />
             <VerifiedServices />
             <LegalRepresentation />
+             <News />
             <Partner />
             <Journey />
             <Story />

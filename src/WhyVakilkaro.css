@@ -1,5 +1,5 @@
 .why-section {
-    background: #212121;
+    background: #212121;    
     padding: 60px 20px;
 }
 
@@ -17,6 +17,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    color: black;
 }
 
 .why-header h2 {
@@ -27,6 +28,7 @@
 
 .why-header h2 span {
     font-weight: 800;
+    color: black;
 }
 
 .why-header p {
@@ -57,6 +59,7 @@
     font-size: 16px;
     letter-spacing: 0.5px;
     font-weight: bold;
+    color: black;
 }
 
 .why-item p {

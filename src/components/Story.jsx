@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../Story.css";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const ScrollDriven = () => {
   const sectionRef = useRef(null);
@@ -63,13 +64,19 @@ const ScrollDriven = () => {
 
         {/* TEXT RIGHT */}
         <div className="text-box" ref={textBoxRef}>
-          <h2>The Vakilkaro Story:</h2>
+          <h1>The Vakilkaro Story:</h1>
 
-          <b>Built for You</b>
+          <h1>Built for You</h1>
           <p>
             We are on a mission to make Entrepreneurship easier and affordable to millions. IndiaFilings provides a simple and intuitive platform for setting up a business and managing compliance. We started our journey in 2014 and bootstrapped the business till 2022, serving over 1 lakh businesses. In 2022, we raised funding from institutional investors to further our mission.
 
           </p>
+           <p>Know More 
+                  <span className="vs-header-icon">
+                        <FiArrowUpRight />
+                      </span>
+           </p>
+           
         </div>
 
       </div>

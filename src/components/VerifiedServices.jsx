@@ -36,9 +36,16 @@ const VerifiedServices = () => {
   return (
     <section className="vs-section">
       <div className="vs-header">
-        <h2>
-          Our <span>Verified Services</span>
-        </h2>
+        <div className="vs-header-top">
+          <h2>
+            Our <span>Verified Services</span>
+          </h2>
+
+          <span className="vs-header-icon">
+            <FiArrowUpRight />
+          </span>
+        </div>
+
         <p>
           All-in-one platform for online legal consultation, business
           incorporation, corporate compliance, and startup-friendly
@@ -57,7 +64,7 @@ const VerifiedServices = () => {
             <span className="vs-arrow">
               <FiArrowUpRight />
             </span>
-            
+
           </div>
         ))}
       </div>

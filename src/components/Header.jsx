@@ -36,7 +36,7 @@ function Header() {
                         <Link to="/">
                             <img src={logo} alt="logo" className="rk-logo" />
                         </Link>
-                    </div>
+                    </div> 
 
 
                     {/* Desktop Navigation */}

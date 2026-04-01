@@ -27,15 +27,14 @@ const data = [
 const LeadershipSection = () => {
   return (
     <section className="leadership">
-      
+
       {/* Heading */}
       <div className="leadership-heading">
         <h2>
-          Stay Informed, <span>Stay Compliant</span>
+          Stay Informed, <span>Stay Compliant Paragraph:</span>
         </h2>
         <p>
-          Your definitive and comprehensive resource for decoding the complex web
-          of laws, regulations, and policies that directly influence business growth.
+          Your definitive and comprehensive resource for decoding the complex web of laws, regulations, and strategic policies that directly influence the sustainable growth of your business and the lasting impact of your social mission.
         </p>
       </div>
 
@@ -43,7 +42,7 @@ const LeadershipSection = () => {
       <div className="leadership-grid">
         {data.map((item, i) => (
           <div className="leadership-card" key={i}>
-            
+
             {/* IMAGE */}
             <img src={`${item.img}?auto=format&fit=crop&w=800&q=80`} alt="" />
 
